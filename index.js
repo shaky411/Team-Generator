@@ -1,7 +1,7 @@
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
-const Employee = require("./lib/Employee");
+// const Employee = require("./lib/Employee");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs/promises");
@@ -24,7 +24,7 @@ let team = [];
       type: "list",
       name: "role",
       message: "Select the type of employee you would like to add",
-      choices: ["Manager", "Engineer", "Intern", "No more entries"]
+      choices: ["Manager", "Engineer", "Intern"]
     },
     {
         type: 'input',
@@ -96,14 +96,8 @@ let team = [];
         team.push(intern1);
     }
 
-    
-        
-
-
-        let htmlDoc = render(team);
-        await fs.writeFile(outputPath, htmlDoc);
-    
-    
+    let htmlDoc = render(team);
+    await fs.writeFile(outputPath, htmlDoc);
 
   }
 
