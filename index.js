@@ -24,7 +24,7 @@ let team = [];
       type: "list",
       name: "role",
       message: "Select the type of employee you would like to add",
-      choices: ["Manager", "Engineer", "Intern"]
+      choices: ["Manager", "Engineer", "Intern", "No more entries"]
     },
     {
         type: 'input',
@@ -48,47 +48,66 @@ let team = [];
         message: 'Please enter your office number',
         when(answers) {
             return answers.role === 'Manager';
-        }
-        // validate(value) {
-        //     const pass = value.match(
-        //         /^([01]{1})?[-.\s]?\(?(\d{3})\)?[-.\s]?(\d{3})[-.\s]?(\d{4})\s?((?:#|ext\.?\s?|x\.?\s?){1}(?:\d+)?)?$/i 
-        //     );
-        //     if (pass) {
-        //         return true;
-        //     }
-        //     return 'Please enter a valid number';
+        },
+        validate(value) {
+            const pass = value.match(
+                /^([01]{1})?[-.\s]?\(?(\d{3})\)?[-.\s]?(\d{3})[-.\s]?(\d{4})\s?((?:#|ext\.?\s?|x\.?\s?){1}(?:\d+)?)?$/i 
+            );
+            if (pass) {
+                return true;
+            }
+            return 'Please enter a valid number';
 
-        // }
+        }
     },
     {
         type: 'input',
         name: 'school',
-        message: 'Please enter school'
+        message: 'Please enter school',
+        when(answers) {
+            return answers.role === "Intern";
+        }
     },
     {
         type: 'input',
         name: 'github',
-        message: 'please provide your github username'
+        message: 'please provide your github username',
+        when(answers) {
+            return answers.role === "Engineer"
+        }
     }
 
 ]
     )
+
     
+    if (data.role === "Manager") {
         const manager1 = new Manager(data.name, data.id , data.email , data.officeNumber );
         team.push(manager1);
+    }
+
+    if (data.role === "Engineer") {
+        const engineer1 = new Engineer(data.name, data.id, data.email, data.github);
+        team.push(engineer1);
+    }
+
+    if (data.role === "Intern") {
+        const intern1 = new Intern(data.name, data.id, data.email, data.school);
+        team.push(intern1);
+    }
 
     
-        // const engineer1 = new Engineer(data.name, data.id, data.email, data.github);
-        // team.push(engineer1);
-    
-        // const intern1 = new Intern("Jessica", 009, "jessica@test.com", "MIT");
-        // team.push(intern1);
+        
 
-    let htmlDoc = render(team);
+
+        let htmlDoc = render(team);
+        await fs.writeFile(outputPath, htmlDoc);
     
-    await fs.writeFile(outputPath, htmlDoc);
+    
 
   }
+
+  
 
   questions();
 
