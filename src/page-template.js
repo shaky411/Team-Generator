@@ -95,13 +95,14 @@ module.exports = team => {
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c502137733.js"></script>
+    <script src="https://kit.fontawesome.com/c835f09f38.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 jumbotron mb-3 team-heading">
-                <h1 class="text-center">My Team</h1>
+                <h1 class="text-center"><i class="fa-solid fa-people-group"></i>My Team</h1>
             </div>
         </div>
     </div>
