@@ -15,7 +15,6 @@
 * [Installation](#installation)
 * [Usage](#usage)
 * [Screenshots](#screenshots)
-* [Application Video Walthrough](#application-video-walkthrough)
 * [Credits](#credits)
 * [License](#license)
 
@@ -23,7 +22,7 @@
 
 **Instructions**
 
-* Create a README generator that displays the following sections:
+Create a command-line application that accepts accepts user input
 
     * The title of my project 
     * Sections entitled:
@@ -42,10 +41,14 @@
 
 <br>
 
+Run the `Team-Generator` application and follow the prompts. You (the manager) will first be prompted for your details before being asked to enter you employee details.
+
+Once you have entered all of the details, the information given will be rendered to a html template file and a finished html file will be created in the output folder.
+
 The application will be invoked by using the following command:
 
 ```bash
-node index.mjs
+node index.js
 ```
 
 <br>
@@ -56,15 +59,7 @@ node index.mjs
 
 ## Screenshots
 
-<br>
-
-
-
-<br>
-
-## Application Video Walkthrough
-
-
+![Alt text](assets/SCR-20230227-udg.png)
 
 <br>
 
