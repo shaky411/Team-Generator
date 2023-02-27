@@ -150,7 +150,7 @@ async function internQuestions() {
 }
 
 
-// Function to write the data to the html file
+// Function to write the data to the html file and end the application
 async function writeToFile() {
     let htmlDoc = render(team);
     await fs.writeFile(outputPath, htmlDoc);
