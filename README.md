@@ -22,18 +22,29 @@
 
 **Instructions**
 
-Create a command-line application that accepts accepts user input
+Create a command-line application that accepts accepts user input and outputs to HTML file.
 
-    * The title of my project 
-    * Sections entitled:
-      * Description 
-      * Table of Contents 
-      * Installation 
-      * Usage 
-      * License 
-      * Contributing 
-      * Tests 
-      * Questions
+* Manger Info
+  - Name
+  - Id
+  - Email
+  - Office Number
+
+<br>
+
+* Engineer:
+  - Name
+  - Id
+  - Email
+  - Github Username
+
+  <br>
+
+* Intern:
+  - Name
+  - Id
+  - Email
+  - School
 
 <br>
 
@@ -54,6 +65,8 @@ node index.js
 <br>
 
 # Usage
+
+N/A
 
 <br>
 
