@@ -72,7 +72,7 @@ N/A
 
 ## Screenshots
 
-![Alt text](assets/SCR-20230227-udg.png)
+![Alt text](assets/SCR-20230228-ct6.png)
 
 <br>
 
