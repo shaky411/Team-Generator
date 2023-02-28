@@ -11,7 +11,7 @@ const render = require("./src/page-template.js");
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 
 // Empty array to store results that will be printed to HTML doc
-let team = [];
+let team = [];  
 
 // Start with manger details then initiate questions for employees
 async function startProgram() {
